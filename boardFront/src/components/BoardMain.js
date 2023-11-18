@@ -11,7 +11,7 @@ const BoardMain = (props) => {
 
     lg('BoardMain');
 
-    axios.get('http://localhost:3030/test1')
+    axios.get('http://192.168.45.169:3030/test1')
         .then((resultData) => {
             lg('axios 통신 ', resultData.data);
             setResult(JSON.stringify(resultData.data));
