@@ -11,14 +11,14 @@ const BoardMain = (props) => {
 
     lg('BoardMain');
 
-    axios.get('https://192.168.45.169:3030/test1')
+    axios.get('//192.168.45.169:3030/test1')
         .then((resultData) => {
             lg('axios 통신 ', resultData.data);
             setResult(JSON.stringify(resultData.data));
             // result = resultData.data;
         })
-        .catch(() => {
-            lg('통신 실패');
+        .catch((err) => {
+            lg('통신 실패', err);
             setResult('Fail');
         })
     return (
